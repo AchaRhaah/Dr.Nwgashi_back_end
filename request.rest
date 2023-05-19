@@ -1,0 +1,13 @@
+GET http://localhost:3001/
+
+###
+
+
+POST http://localhost:3001/record HTTP/1.1
+Content-Type: application/json
+
+{
+  "uniqueCode": "abc123",
+  "name": "Daniel",
+  "sex": "male"
+}
