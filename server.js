@@ -36,9 +36,9 @@ app.post("/record", createAppointment);
 
 app.patch("/update/:id", UpdateAppt);
 
-app.post("/signup", Signup);
+app.post("/signin", Login);
 
-app.post("/login", Login);
+app.post("/signup", Signup);
 
 
 
