@@ -7,6 +7,8 @@ const UpdateAppt = require("./controllers/updateAppointment");
 const createAppointment = require("./controllers/createAppt");
 const getAppointment = require("./controllers/getAppointments");
 const getSingleAppointment = require("./controllers/GetSingleApptData");
+const Signup = require("./controllers/signup");
+const Login = require("./controllers/login");
 const app = express();
 dotenv.config();
 
@@ -33,6 +35,12 @@ app.get("/:id", getSingleAppointment);
 app.post("/record", createAppointment);
 
 app.patch("/update/:id", UpdateAppt);
+
+app.post("/signup", Signup);
+
+app.post("/login", Login);
+
+
 
 //
 

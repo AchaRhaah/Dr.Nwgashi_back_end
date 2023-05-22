@@ -5,7 +5,6 @@ const AppointmentSchema = new Schema({
   uniqueCode: {
     type: String,
     required: true,
-    unique: true,
   },
   name: {
     type: String,
