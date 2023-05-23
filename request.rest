@@ -8,17 +8,6 @@ GET  http://localhost:3001/ HTTP/1.1
 Content-Type: application/json
 ###
 
-
-
-POST  http://localhost:3001/sign_up  HTTP/1.1
-Content-Type: application/json
-{
-  "email": "datatellers123@g.com",
-  "password": "teSt12()#",
-  "name": "acha",
-}
-
-###
 POST  http://localhost:3001/sign_up  HTTP/1.1
 Content-Type: application/json
 
