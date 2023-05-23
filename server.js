@@ -9,6 +9,7 @@ const getAppointment = require("./controllers/getAppointments");
 const getSingleAppointment = require("./controllers/GetSingleApptData");
 const Signup = require("./controllers/signup");
 const Login = require("./controllers/login");
+const requireAuth = require("./middleware/requireAuth");
 const app = express();
 dotenv.config();
 
@@ -28,6 +29,9 @@ mongoose
   })
   .catch(console.error);
 
+// require auth for all routes
+// app.use(requireAuth)
+
 app.get("/", getAppointment);
 
 app.get("/:id", getSingleAppointment);
@@ -36,9 +40,9 @@ app.post("/record", createAppointment);
 
 app.patch("/update/:id", UpdateAppt);
 
-app.post("/signin", Login);
+app.post("/sign_up", Signup);
 
-app.post("/signup", Signup);
+app.post("/sign_in", Login);
 
 
 
